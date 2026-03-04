@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭвоТех — поставки электротехнического оборудования и металлопроката по России</title>
+    <meta name="description" content="ЭвоТех — надёжный поставщик промышленного электротехнического оборудования, металлопроката, труб и металлоизделий. Низкие цены, собственный склад в Санкт-Петербурге, доставка по всей России.">
+    <meta name="keywords" content="металлопрокат, трубы, электротехническое оборудование, поставка металла, труба б/у, профильная труба, Санкт-Петербург">
+    <meta property="og:title" content="ЭвоТех — электротехника и металлопрокат">
+    <meta property="og:description" content="Поставки промышленного оборудования и металлопроката по всей России. Низкие цены, наличие на складе.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evotech.group/">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="canonical" href="https://evotech.group/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header" id="header" role="banner">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="ЭвоТех — на главную">
+                <div class="logo-mark" aria-hidden="true">E</div>
+                <div class="logo-text">Эво<span>Тех</span></div>
+            </a>
+            <nav class="nav" role="navigation" aria-label="Основная навигация">
+                <a href="#metal">Металлопрокат</a>
+                <a href="#catalogue">Каталог</a>
+                <a href="#news">Акции</a>
+                <a href="#services">Услуги</a>
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <div class="header-right">
+                <a href="tel:+78125021280" class="header-phone">8 (812) 502-12-80</a>
+                <a href="#cta" class="btn btn-primary btn-sm">Заявка</a>
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Мобильная навигация">
+        <a href="#metal" onclick="closeMobile()">Металлопрокат</a>
+        <a href="#catalogue" onclick="closeMobile()">Каталог</a>
+        <a href="#news" onclick="closeMobile()">Акции</a>
+        <a href="#services" onclick="closeMobile()">Услуги</a>
+        <a href="#about" onclick="closeMobile()">О нас</a>
+        <a href="#contacts" onclick="closeMobile()">Контакты</a>
+        <a href="tel:+78125021280" onclick="closeMobile()" style="color:var(--brand);margin-top:12px;">8 (812) 502-12-80</a>
+    </div>
+
+    <div class="urgency-strip" role="alert">
+        <div class="container">
+            <p>&#128293; Распродажа труб б/у — скидки до 20% при выборке от 10 тонн. <a href="#metal">Успейте купить &rarr;</a></p>
+        </div>
+    </div>
+
+    <main>
+    <section class="hero" role="region" aria-label="Главный экран">
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <div>
+                <div class="hero-tag reveal">Надёжный поставщик с 2015 года</div>
+                <h1 class="reveal reveal-d1">Электротехника и&nbsp;<span class="accent-word">металлопрокат</span> для&nbsp;вашего бизнеса</h1>
+                <p class="hero-subtitle reveal reveal-d2">Поставляем промышленное оборудование, трубы новые и&nbsp;б/у, чёрный металл, профиль. Собственный склад в&nbsp;Петербурге. Одни из&nbsp;самых низких цен в&nbsp;России.</p>
+                <div class="hero-actions reveal reveal-d3">
+                    <a href="#cta" class="btn btn-primary">Оставить заявку</a>
+                    <a href="#metal" class="btn btn-white">Каталог металла &rarr;</a>
+                </div>
+            </div>
+            <div class="hero-stats reveal reveal-d4">
+                <div class="hero-stat">
+                    <div class="hero-stat-num">10 000<span>+</span></div>
+                    <div class="hero-stat-label">наименований на складе</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">9 <span>лет</span></div>
+                    <div class="hero-stat-label">работы на рынке</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">500<span>+</span></div>
+                    <div class="hero-stat-label">постоянных клиентов</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-num">24<span>ч</span></div>
+                    <div class="hero-stat-label">отгрузка со склада</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section metal-section" id="metal" aria-label="Металлопрокат и трубы">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag"><span class="tag tag-accent">Ключевое направление</span></div>
+                <h2 class="section-title">Металл, трубы, металлоизделия</h2>
+                <p class="section-desc">Полный сортамент чёрного металлопроката и трубной продукции. Диаметры 50–250&nbsp;мм, новая и б/у труба. Прямые поставки с заводов.</p>
+            </div>
+            <div class="bento-grid">
+                <article class="bento-card featured reveal">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop" alt="Стальные трубы на складе" class="bento-card-img" loading="eager" decoding="async" width="800" height="600" onerror="this.style.background='linear-gradient(135deg,#0e3f56,#135472)';this.alt=''">
+                    <div class="bento-card-body">
+                        <span class="tag tag-green">&#10003; В наличии</span>
+                        <h3 class="bento-card-title">Трубы стальные новые</h3>
+                        <p class="bento-card-desc">Электросварные, бесшовные, профильные. Диаметры от 50 до 250&nbsp;мм. ГОСТ 10704, ГОСТ 10705, ГОСТ 8732. Сертификаты качества в комплекте.</p>
+                        <div class="bento-card-footer"><a href="#cta" class="btn btn-primary btn-sm">Запросить цену</a></div>
+                    </div>
+                </article>
+                <article class="bento-card reveal reveal-d1">
+                    <img src="https://images.unsplash.com/photo-1635070040884-957a331ee710?w=600&h=440&fit=crop" alt="Труба б/у" class="bento-card-img" loading="lazy" decoding="async" width="600" height="440" onerror="this.style.background='var(--gray-100)';this.style.height='220px'">
+                    <div class="bento-card-body">
+                        <span class="tag tag-accent">Цена &darr; до 40%</span>
+                        <h3 class="bento-card-title">Трубы б/у</h3>
+                        <p class="bento-card-desc">Восстановленные после КР магистралей. &Oslash; 50–250&nbsp;мм. Экономия до 40%.</p>
+                    </div>
+                </article>
+                <article class="bento-card reveal reveal-d2">
+                    <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=600&h=440&fit=crop" alt="Чёрный металлопрокат" class="bento-card-img" loading="lazy" decoding="async" width="600" height="440" onerror="this.style.background='var(--gray-100)';this.style.height='220px'">
+                    <div class="bento-card-body">
+                        <span class="tag tag-green">&#10003; В наличии</span>
+                        <h3 class="bento-card-title">Чёрный металлопрокат</h3>
+                        <p class="bento-card-desc">Арматура, швеллер, двутавр, уголок, лист, круг, полоса.</p>
+                    </div>
+                </article>
+                <article class="bento-card reveal reveal-d3">
+                    <img src="https://images.unsplash.com/photo-1605556448815-ccc5e876aa9c?w=600&h=440&fit=crop" alt="Профильная труба" class="bento-card-img" loading="lazy" decoding="async" width="600" height="440" onerror="this.style.background='var(--gray-100)';this.style.height='220px'">
+                    <div class="bento-card-body">
+                        <span class="tag tag-green">&#10003; В наличии</span>
+                        <h3 class="bento-card-title">Профильная труба</h3>
+                        <p class="bento-card-desc">Квадратная, прямоугольная. От 20&times;20 до 200&times;200.</p>
+                    </div>
+                </article>
+                <article class="bento-card reveal reveal-d4">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=440&fit=crop" alt="Металлоизделия" class="bento-card-img" loading="lazy" decoding="async" width="600" height="440" onerror="this.style.background='var(--gray-100)';this.style.height='220px'">
+                    <div class="bento-card-body">
+                        <span class="tag tag-brand">Под заказ</span>
+                        <h3 class="bento-card-title">Металлоконструкции</h3>
+                        <p class="bento-card-desc">Сложные изделия, закладные, фланцы, опоры, ограждения.</p>
+                    </div>
+                </article>
+                <article class="bento-card reveal reveal-d5">
+                    <img src="https://images.unsplash.com/photo-1530982011887-3cc11cc85693?w=600&h=440&fit=crop" alt="Трубы ВУС" class="bento-card-img" loading="lazy" decoding="async" width="600" height="440" onerror="this.style.background='var(--gray-100)';this.style.height='220px'">
+                    <div class="bento-card-body">
+                        <span class="tag tag-green">&#10003; В наличии</span>
+                        <h3 class="bento-card-title">Трубы ВУС</h3>
+                        <p class="bento-card-desc">С весьма усиленной изоляцией для подземных магистралей.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="metal-advantages">
+                <div class="metal-adv reveal"><div class="metal-adv-icon" aria-hidden="true">&#127959;&#65039;</div><div class="metal-adv-title">Свой склад</div><div class="metal-adv-desc">2 000+ тонн в наличии</div></div>
+                <div class="metal-adv reveal reveal-d1"><div class="metal-adv-icon" aria-hidden="true">&#128201;</div><div class="metal-adv-title">Низкие цены</div><div class="metal-adv-desc">Прямые контракты с заводами</div></div>
+                <div class="metal-adv reveal reveal-d2"><div class="metal-adv-icon" aria-hidden="true">&#128666;</div><div class="metal-adv-title">Доставка по РФ</div><div class="metal-adv-desc">Авто и ж/д логистика</div></div>
+                <div class="metal-adv reveal reveal-d3"><div class="metal-adv-icon" aria-hidden="true">&#128203;</div><div class="metal-adv-title">Сертификаты</div><div class="metal-adv-desc">Полный пакет документов</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section news-section" id="news" aria-label="Новости и акции">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag"><span class="tag tag-red">Горячие предложения</span></div>
+                <h2 class="section-title">Акции и новости</h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-card highlight reveal">
+                    <div class="news-card-body">
+                        <span class="tag tag-red">Распродажа</span>
+                        <div class="news-card-date">3 марта 2026</div>
+                        <h3 class="news-card-title">Трубы б/у &Oslash; 159–219 мм — ликвидация остатков</h3>
+                        <p class="news-card-text">На складе 120 тонн восстановленных труб. Скидка до 20% при выборке от 10 тонн. Предложение ограничено наличием!</p>
+                        <div style="margin-top:16px"><a href="#cta" class="btn btn-primary btn-sm">Успеть купить</a></div>
+                    </div>
+                </article>
+                <article class="news-card reveal reveal-d1">
+                    <div class="news-card-body">
+                        <span class="tag tag-green">Новинка</span>
+                        <div class="news-card-date">28 февраля 2026</div>
+                        <h3 class="news-card-title">Расширен ассортимент профильной трубы</h3>
+                        <p class="news-card-text">Новые размеры: 140&times;140, 160&times;160, 180&times;80. Прямые поставки с ЧТПЗ и ОМК. Все сертификаты в комплекте.</p>
+                    </div>
+                </article>
+                <article class="news-card reveal reveal-d2">
+                    <div class="news-card-body">
+                        <span class="tag tag-brand">Компания</span>
+                        <div class="news-card-date">15 февраля 2026</div>
+                        <h3 class="news-card-title">ЭвоТех открыл направление металлопроката</h3>
+                        <p class="news-card-text">Увеличены объёмы поставок, расширен ассортимент. Теперь помимо электротехники — полный спектр металла и труб по конкурентным ценам.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section catalogue-section" id="catalogue" aria-label="Каталог оборудования">
+        <div class="container">
+            <div class="section-header reveal" style="text-align:center">
+                <div class="section-tag"><span class="tag">Каталог</span></div>
+                <h2 class="section-title">Электротехническое оборудование</h2>
+                <p class="section-desc centered">Полный спектр промышленного оборудования от ведущих производителей</p>
+            </div>
+            <div class="cat-grid">
+                <div class="cat-card reveal"><span class="cat-card-icon" aria-hidden="true">&#128225;</span><div class="cat-card-name">Телекоммуникационное оборудование</div><div class="cat-card-desc">Базовые станции, антенны, РРЛ</div></div>
+                <div class="cat-card reveal reveal-d1"><span class="cat-card-icon" aria-hidden="true">&#128300;</span><div class="cat-card-name">Контрольно-измерительное</div><div class="cat-card-desc">КИП, датчики, анализаторы</div></div>
+                <div class="cat-card reveal reveal-d2"><span class="cat-card-icon" aria-hidden="true">&#128268;</span><div class="cat-card-name">Кабельная продукция</div><div class="cat-card-desc">Силовые кабели, оптоволокно</div></div>
+                <div class="cat-card reveal reveal-d3"><span class="cat-card-icon" aria-hidden="true">&#128295;</span><div class="cat-card-name">Щитовое оборудование</div><div class="cat-card-desc">ШУ, распределительные щиты</div></div>
+                <div class="cat-card reveal reveal-d4"><span class="cat-card-icon" aria-hidden="true">&#128737;&#65039;</span><div class="cat-card-name">КИТСО</div><div class="cat-card-desc">Видеонаблюдение, СКУД, охрана</div></div>
+                <div class="cat-card reveal reveal-d5"><span class="cat-card-icon" aria-hidden="true">&#9889;</span><div class="cat-card-name">Электросетевой комплекс</div><div class="cat-card-desc">Трансформаторы, подстанции</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services-section" id="services" aria-label="Услуги">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag"><span class="tag tag-brand">Услуги</span></div>
+                <h2 class="section-title">Комплексные решения</h2>
+            </div>
+            <div class="services-grid">
+                <article class="service-card reveal" data-num="01"><h3 class="service-card-title">Проектирование</h3><p class="service-card-desc">Предпроектное обследование, разработка документации, подбор оборудования</p></article>
+                <article class="service-card reveal reveal-d1" data-num="02"><h3 class="service-card-title">Поставка</h3><p class="service-card-desc">Комплектация «под ключ», логистика по всей России, работа по 44-ФЗ и 223-ФЗ</p></article>
+                <article class="service-card reveal reveal-d2" data-num="03"><h3 class="service-card-title">Интеграция</h3><p class="service-card-desc">Разработка ПО, системная интеграция, автоматизация процессов</p></article>
+                <article class="service-card reveal reveal-d3" data-num="04"><h3 class="service-card-title">Сервис</h3><p class="service-card-desc">Гарантийное и постгарантийное обслуживание, поддержка 24/7</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section" aria-label="Партнёры">
+        <div class="container">
+            <div class="partners-label"><span class="tag tag-brand">Производители и партнёры</span></div>
+            <div class="partners-row">
+                <span class="partner-pill">АГАТ</span>
+                <span class="partner-pill">Бастион</span>
+                <span class="partner-pill">Delta</span>
+                <span class="partner-pill">Huawei</span>
+                <span class="partner-pill">InfiNet</span>
+                <span class="partner-pill">Ippon</span>
+                <span class="partner-pill">G2 Techno</span>
+                <span class="partner-pill">Ceragon</span>
+                <span class="partner-pill">Микран</span>
+                <span class="partner-pill">TFortis</span>
+                <span class="partner-pill">UserGate</span>
+                <span class="partner-pill">ЧТПЗ</span>
+                <span class="partner-pill">ОМК</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-label="О компании">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-text reveal">
+                    <div class="section-tag"><span class="tag tag-brand">О компании</span></div>
+                    <h2 class="section-title" style="margin-bottom:20px">ЭвоТех — надёжность и&nbsp;опыт</h2>
+                    <p>«ЭвоТех» — динамично развивающаяся компания, работающая на рынке промышленных поставок с 2015 года. Мы специализируемся на поставках электротехнического оборудования, металлопроката и трубной продукции.</p>
+                    <p>Наша команда — квалифицированные инженеры и менеджеры с многолетним опытом. Предлагаем комплексные решения от подбора оборудования до доставки и сервиса.</p>
+                    <p>В 2025 году компания значительно расширила ассортимент, открыв направление металлопроката. Прямые контракты с крупнейшими производителями обеспечивают лучшие цены на рынке.</p>
+                    <div class="about-metrics">
+                        <div class="about-metric"><div class="about-metric-num">9+</div><div class="about-metric-label">лет на рынке</div></div>
+                        <div class="about-metric"><div class="about-metric-num">10 000+</div><div class="about-metric-label">позиций в каталоге</div></div>
+                        <div class="about-metric"><div class="about-metric-num">89</div><div class="about-metric-label">регионов доставки</div></div>
+                        <div class="about-metric"><div class="about-metric-num">2 000+</div><div class="about-metric-label">тонн на складе</div></div>
+                    </div>
+                </div>
+                <div class="about-visual reveal reveal-d2">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=520&fit=crop" alt="Склад ЭвоТех" class="about-img" loading="lazy" decoding="async" width="700" height="520" onerror="this.style.background='linear-gradient(135deg, var(--brand-subtle), var(--gray-100))';this.style.height='460px'">
+                    <div class="about-badge">С 2015 года</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section" id="cta" aria-label="Форма заявки">
+        <div class="container">
+            <div class="cta-layout">
+                <div class="cta-text reveal">
+                    <h2>Ответим за&nbsp;30&nbsp;минут</h2>
+                    <p>Отправьте запрос на поставку — менеджеры подготовят коммерческое предложение с лучшей ценой и сроками. Работаем с юридическими и физическими лицами.</p>
+                </div>
+                <div class="cta-form-card reveal reveal-d2">
+                    <h3>Заявка на поставку</h3>
+                    <form id="ctaForm" novalidate>
+                        <div class="form-group"><input type="text" class="form-input" name="name" placeholder="Ваше имя" required aria-label="Имя" autocomplete="name"></div>
+                        <div class="form-group"><input type="tel" class="form-input" name="phone" placeholder="Телефон" required pattern="[\d\s\+\-\(\)]{7,}" aria-label="Телефон" autocomplete="tel"></div>
+                        <div class="form-group"><input type="email" class="form-input" name="email" placeholder="E-mail" aria-label="Email" autocomplete="email"></div>
+                        <div class="form-group">
+                            <select class="form-select" name="category" aria-label="Направление">
+                                <option value="" disabled selected>Интересующее направление</option>
+                                <option value="metal">Металлопрокат и трубы</option>
+                                <option value="electro">Электротехническое оборудование</option>
+                                <option value="cable">Кабельная продукция</option>
+                                <option value="telecom">Телекоммуникации</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><textarea class="form-textarea" name="message" placeholder="Что вам нужно? (наименование, объём, сроки)" aria-label="Сообщение"></textarea></div>
+                        <div class="ohnohoney"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+                        <button type="submit" class="form-submit" id="submitBtn">Отправить заявку</button>
+                        <p class="form-note">Нажимая кнопку, вы даёте согласие на обработку персональных данных</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contacts-section" id="contacts" aria-label="Контакты">
+        <div class="container">
+            <div class="section-header reveal" style="text-align:center">
+                <div class="section-tag"><span class="tag tag-brand">Контакты</span></div>
+                <h2 class="section-title">Свяжитесь с нами</h2>
+            </div>
+            <div class="contacts-grid">
+                <div class="contact-card reveal"><h4>Адрес</h4><p>г. Санкт-Петербург,<br>ул. Малая Разночинная, д. 9,<br>литера А, офис 102</p></div>
+                <div class="contact-card reveal reveal-d1"><h4>Телефон и почта</h4><a href="tel:+78125021280" class="contact-phone-big">8 (812) 502-12-80</a><br><a href="mailto:info@evotech.group">info@evotech.group</a></div>
+                <div class="contact-card reveal reveal-d2"><h4>Реквизиты</h4><p>ООО «ЭвоТех»<br>ИНН 7813676895<br>ОГРН 1237800140819</p></div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-copy">&copy; 2015–2026 ООО «ЭвоТех». Все права защищены.</div>
+            <div class="footer-links">
+                <a href="mailto:info@evotech.group">info@evotech.group</a>
+                <a href="tel:+78125021280">8 (812) 502-12-80</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
