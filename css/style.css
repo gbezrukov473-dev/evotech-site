@@ -253,22 +253,13 @@ button {
     z-index: 101;
 }
 
-.logo-mark {
-    width: 38px;
-    height: 38px;
-    background: var(--brand);
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-family: 'Unbounded', sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    transition: background var(--duration);
+.logo-svg {
+    width: 36px;
+    height: 37px;
+    transition: opacity var(--duration);
 }
 
-.logo:hover .logo-mark { background: var(--brand-light); }
+.logo:hover .logo-svg { opacity: 0.75; }
 
 .logo-text {
     font-family: 'Unbounded', sans-serif;
