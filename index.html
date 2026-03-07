@@ -10,6 +10,7 @@
     <meta property="og:description" content="Поставки промышленного оборудования и металлопроката по всей России. Низкие цены, наличие на складе.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://evotech.group/">
+    <meta property="og:image" content="https://evotech.group/og-cover.jpg">
     <meta property="og:locale" content="ru_RU">
     <link rel="canonical" href="https://evotech.group/">
     <link rel="icon" href="favicon.ico" sizes="any">
@@ -18,47 +19,92 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#0F2B3C">
+    <link rel="preload" href="img/truby-stalnye-novye.jpg" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://evotech.group/#org",
+                "name": "ООО «ЭвоТех»",
+                "url": "https://evotech.group/",
+                "logo": "https://evotech.group/et-logo.svg",
+                "telephone": "+7 (812) 502-12-80",
+                "email": "info@evotech.group",
+                "taxID": "7813676895",
+                "foundingDate": "2015"
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://evotech.group/#business",
+                "name": "ЭвоТех",
+                "description": "Поставки промышленного электротехнического оборудования, металлопроката и трубной продукции",
+                "url": "https://evotech.group/",
+                "telephone": "+7 (812) 502-12-80",
+                "email": "info@evotech.group",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "ул. Малая Разночинная, д. 9, литера А, офис 102",
+                    "addressLocality": "Санкт-Петербург",
+                    "addressCountry": "RU"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 59.9534,
+                    "longitude": 30.2968
+                },
+                "openingHours": "Mo-Fr 09:00-18:00"
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <header class="header" id="header" role="banner">
         <div class="container header-inner">
-            <a href="#" class="logo" aria-label="ЭвоТех — на главную">
+            <a href="/" class="logo" aria-label="ЭвоТех — на главную">
                 <img src="et-logo.svg" alt="ЭвоТех" class="logo-svg" width="36" height="37">
                 <div class="logo-text">Эво<span>Тех</span></div>
             </a>
             <nav class="nav" role="navigation" aria-label="Основная навигация">
-                <a href="#metal">Металлопрокат</a>
-                <a href="#catalogue">Каталог</a>
-                <a href="#news">Акции</a>
-                <a href="#services">Услуги</a>
-                <a href="#about">О нас</a>
-                <a href="#contacts">Контакты</a>
+                <ul>
+                    <li><a href="#metal">Металлопрокат</a></li>
+                    <li><a href="#news">Акции</a></li>
+                    <li><a href="#catalogue">Каталог</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
             </nav>
             <div class="header-right">
                 <a href="tel:+78125021280" class="header-phone">8 (812) 502-12-80</a>
                 <a href="#cta" class="btn btn-primary btn-sm">Заявка</a>
-                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileNav">
                     <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Мобильная навигация">
-        <a href="#metal" onclick="closeMobile()">Металлопрокат</a>
-        <a href="#catalogue" onclick="closeMobile()">Каталог</a>
-        <a href="#news" onclick="closeMobile()">Акции</a>
-        <a href="#services" onclick="closeMobile()">Услуги</a>
-        <a href="#about" onclick="closeMobile()">О нас</a>
-        <a href="#contacts" onclick="closeMobile()">Контакты</a>
-        <a href="tel:+78125021280" onclick="closeMobile()" style="color:var(--accent);margin-top:12px;">8 (812) 502-12-80</a>
-    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Мобильная навигация">
+        <ul>
+            <li><a href="#metal">Металлопрокат</a></li>
+            <li><a href="#news">Акции</a></li>
+            <li><a href="#catalogue">Каталог</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+            <li><a href="tel:+78125021280" class="mobile-nav-phone">8 (812) 502-12-80</a></li>
+        </ul>
+    </nav>
 
-    <div class="urgency-strip" role="alert">
+    <div class="urgency-strip">
         <div class="container">
             <p><strong>Распродажа</strong> — трубы б/у со скидкой до 20% при выборке от 10 тонн. <a href="#metal">Подробнее &rarr;</a></p>
         </div>
@@ -83,7 +129,7 @@
                     <div class="hero-stat-label">наименований на складе</div>
                 </div>
                 <div class="hero-stat">
-                    <div class="hero-stat-num">9 <span>лет</span></div>
+                    <div class="hero-stat-num">11 <span>лет</span></div>
                     <div class="hero-stat-label">работы на рынке</div>
                 </div>
                 <div class="hero-stat">
@@ -178,7 +224,7 @@
                         <div class="news-card-date">3 марта 2026</div>
                         <h3 class="news-card-title">Трубы б/у &Oslash; 159–219 мм — ликвидация остатков</h3>
                         <p class="news-card-text">На складе 120 тонн восстановленных труб. Скидка до 20% при выборке от 10 тонн. Предложение ограничено наличием!</p>
-                        <div style="margin-top:16px"><a href="#cta" class="btn btn-primary btn-sm">Успеть купить</a></div>
+                        <div class="news-card-action"><a href="#cta" class="btn btn-primary btn-sm">Успеть купить</a></div>
                     </div>
                 </article>
                 <article class="news-card reveal reveal-d1">
@@ -203,7 +249,7 @@
 
     <section class="section catalogue-section" id="catalogue" aria-label="Каталог оборудования">
         <div class="container">
-            <div class="section-header reveal" style="text-align:center">
+            <div class="section-header reveal text-center">
                 <div class="section-tag"><span class="tag">Каталог</span></div>
                 <h2 class="section-title">Электротехническое оборудование</h2>
                 <p class="section-desc centered">Полный спектр промышленного оборудования от ведущих производителей</p>
@@ -260,12 +306,12 @@
             <div class="about-layout">
                 <div class="about-text reveal">
                     <div class="section-tag"><span class="tag tag-brand">О компании</span></div>
-                    <h2 class="section-title" style="margin-bottom:20px">ЭвоТех — надёжность и&nbsp;опыт</h2>
+                    <h2 class="section-title mb-20">ЭвоТех — надёжность и&nbsp;опыт</h2>
                     <p>«ЭвоТех» — динамично развивающаяся компания, работающая на рынке промышленных поставок с 2015 года. Мы специализируемся на поставках электротехнического оборудования, металлопроката и трубной продукции.</p>
                     <p>Наша команда — квалифицированные инженеры и менеджеры с многолетним опытом. Предлагаем комплексные решения от подбора оборудования до доставки и сервиса.</p>
                     <p>В 2025 году компания значительно расширила ассортимент, открыв направление металлопроката. Прямые контракты с крупнейшими производителями обеспечивают лучшие цены на рынке.</p>
                     <div class="about-metrics">
-                        <div class="about-metric"><div class="about-metric-num">9+</div><div class="about-metric-label">лет на рынке</div></div>
+                        <div class="about-metric"><div class="about-metric-num">11+</div><div class="about-metric-label">лет на рынке</div></div>
                         <div class="about-metric"><div class="about-metric-num">10 000+</div><div class="about-metric-label">позиций в каталоге</div></div>
                         <div class="about-metric"><div class="about-metric-num">89</div><div class="about-metric-label">регионов доставки</div></div>
                         <div class="about-metric"><div class="about-metric-num">2 000+</div><div class="about-metric-label">тонн на складе</div></div>
@@ -288,12 +334,22 @@
                 </div>
                 <div class="cta-form-card reveal reveal-d2">
                     <h3>Заявка на поставку</h3>
-                    <form id="ctaForm" novalidate>
-                        <div class="form-group"><input type="text" class="form-input" name="name" placeholder="Ваше имя" required aria-label="Имя" autocomplete="name"></div>
-                        <div class="form-group"><input type="tel" class="form-input" name="phone" placeholder="Телефон" required pattern="[\d\s\+\-\(\)]{7,}" aria-label="Телефон" autocomplete="tel"></div>
-                        <div class="form-group"><input type="email" class="form-input" name="email" placeholder="E-mail" aria-label="Email" autocomplete="email"></div>
+                    <form id="ctaForm">
                         <div class="form-group">
-                            <select class="form-select" name="category" aria-label="Направление">
+                            <label for="field-name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-input" id="field-name" name="name" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="field-phone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-input" id="field-phone" name="phone" required pattern="[\d\s\+\-\(\)]{7,}" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="field-email" class="form-label">E-mail</label>
+                            <input type="email" class="form-input" id="field-email" name="email" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="field-category" class="form-label">Направление</label>
+                            <select class="form-select" id="field-category" name="category">
                                 <option value="" disabled selected>Интересующее направление</option>
                                 <option value="metal">Металлопрокат и трубы</option>
                                 <option value="electro">Электротехническое оборудование</option>
@@ -302,10 +358,16 @@
                                 <option value="other">Другое</option>
                             </select>
                         </div>
-                        <div class="form-group"><textarea class="form-textarea" name="message" placeholder="Что вам нужно? (наименование, объём, сроки)" aria-label="Сообщение"></textarea></div>
-                        <div class="ohnohoney"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+                        <div class="form-group">
+                            <label for="field-message" class="form-label">Сообщение</label>
+                            <textarea class="form-textarea" id="field-message" name="message" placeholder="Наименование, объём, сроки"></textarea>
+                        </div>
+                        <div class="ohnohoney" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+                        <div class="form-group form-consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <label for="consent">Даю согласие на <a href="privacy.html" target="_blank">обработку персональных данных</a></label>
+                        </div>
                         <button type="submit" class="form-submit" id="submitBtn">Отправить заявку</button>
-                        <p class="form-note">Нажимая кнопку, вы даёте согласие на обработку персональных данных</p>
                     </form>
                 </div>
             </div>
@@ -314,14 +376,14 @@
 
     <section class="section contacts-section" id="contacts" aria-label="Контакты">
         <div class="container">
-            <div class="section-header reveal" style="text-align:center">
+            <div class="section-header reveal text-center">
                 <div class="section-tag"><span class="tag tag-brand">Контакты</span></div>
                 <h2 class="section-title">Свяжитесь с нами</h2>
             </div>
             <div class="contacts-grid">
-                <div class="contact-card reveal"><h4>Адрес</h4><p>г. Санкт-Петербург,<br>ул. Малая Разночинная, д. 9,<br>литера А, офис 102</p></div>
-                <div class="contact-card reveal reveal-d1"><h4>Телефон и почта</h4><a href="tel:+78125021280" class="contact-phone-big">8 (812) 502-12-80</a><br><a href="mailto:info@evotech.group">info@evotech.group</a></div>
-                <div class="contact-card reveal reveal-d2"><h4>Реквизиты</h4><p>ООО «ЭвоТех»<br>ИНН 7813676895<br>ОГРН 1237800140819</p></div>
+                <div class="contact-card reveal"><h3 class="contact-card-title">Адрес</h3><p>г. Санкт-Петербург,<br>ул. Малая Разночинная, д. 9,<br>литера А, офис 102</p></div>
+                <div class="contact-card reveal reveal-d1"><h3 class="contact-card-title">Телефон и почта</h3><a href="tel:+78125021280" class="contact-phone-big">8 (812) 502-12-80</a><br><a href="mailto:info@evotech.group">info@evotech.group</a></div>
+                <div class="contact-card reveal reveal-d2"><h3 class="contact-card-title">Реквизиты</h3><p>ООО «ЭвоТех»<br>ИНН 7813676895<br>ОГРН 1237800140819</p></div>
             </div>
         </div>
     </section>
@@ -331,11 +393,14 @@
         <div class="container footer-inner">
             <div class="footer-copy">&copy; 2015–2026 ООО «ЭвоТех». Все права защищены.</div>
             <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
                 <a href="mailto:info@evotech.group">info@evotech.group</a>
                 <a href="tel:+78125021280">8 (812) 502-12-80</a>
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх" type="button">&uarr;</button>
 
     <script type="module" src="js/main.js"></script>
 </body>

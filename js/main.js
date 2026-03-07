@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Scroll reveal
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -11,38 +10,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Sticky header
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 30);
     }, { passive: true });
 
-    // Burger menu
     const burger = document.getElementById('burger');
     const mobileNav = document.getElementById('mobileNav');
+    const focusableSelector = 'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
 
-    burger.addEventListener('click', () => {
-        const isOpen = mobileNav.classList.toggle('open');
-        burger.classList.toggle('active');
-        burger.setAttribute('aria-expanded', isOpen);
-        document.body.style.overflow = isOpen ? 'hidden' : '';
-    });
+    function openMobile() {
+        mobileNav.classList.add('open');
+        burger.classList.add('active');
+        burger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
 
-    window.closeMobile = function () {
+        const firstFocusable = mobileNav.querySelector(focusableSelector);
+        if (firstFocusable) firstFocusable.focus();
+
+        document.addEventListener('keydown', trapFocus);
+    }
+
+    function closeMobile() {
         mobileNav.classList.remove('open');
         burger.classList.remove('active');
         burger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
-    };
 
-    // Catalogue cards — scroll to CTA
+        document.removeEventListener('keydown', trapFocus);
+        burger.focus();
+    }
+
+    function trapFocus(e) {
+        if (e.key === 'Escape') {
+            closeMobile();
+            return;
+        }
+
+        if (e.key !== 'Tab') return;
+
+        const focusables = [...mobileNav.querySelectorAll(focusableSelector)];
+        if (!focusables.length) return;
+
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+
+        if (e.shiftKey) {
+            if (document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            }
+        } else {
+            if (document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        }
+    }
+
+    burger.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.contains('open');
+        if (isOpen) {
+            closeMobile();
+        } else {
+            openMobile();
+        }
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobile);
+    });
+
     document.querySelectorAll('.cat-card').forEach(card => {
         card.addEventListener('click', () => {
             document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
         });
     });
 
-    // Form submission
     const form = document.getElementById('ctaForm');
     const submitBtn = document.getElementById('submitBtn');
 
@@ -50,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         if (form.querySelector('input[name="website"]').value) return;
+
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
@@ -64,5 +109,15 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = false;
             submitBtn.textContent = 'Отправить заявку';
         }, 800);
+    });
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+
+    window.addEventListener('scroll', () => {
+        scrollTopBtn.classList.toggle('visible', window.scrollY > window.innerHeight);
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
