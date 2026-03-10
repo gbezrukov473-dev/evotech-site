@@ -587,6 +587,9 @@ button {
     letter-spacing: 0.06em;
 }
 
+/* ─── Electro Section ─── */
+.electro-section { background: var(--white); }
+
 /* ─── Metal Bento ─── */
 .metal-section { background: var(--off-white); }
 
@@ -781,99 +784,6 @@ button {
     font-size: var(--text-sm);
     color: var(--gray-400);
     line-height: 1.7;
-}
-
-/* ─── Catalogue ─── */
-.catalogue-section {
-    background: var(--gray-900);
-    position: relative;
-    overflow: hidden;
-}
-
-.catalogue-section::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-}
-
-.catalogue-section .section-title { color: var(--white); }
-.catalogue-section .section-desc { color: rgba(255, 255, 255, 0.35); }
-.catalogue-section .tag { background: rgba(255, 255, 255, 0.06); color: rgba(255, 255, 255, 0.5); border: 1px solid rgba(255, 255, 255, 0.08); }
-
-.cat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    position: relative;
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.cat-card {
-    padding: clamp(24px, 3vw, 32px);
-    background: var(--gray-900);
-    transition: all var(--duration) var(--ease-out);
-    cursor: pointer;
-    position: relative;
-}
-
-.cat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: width 0.4s var(--ease-out);
-}
-
-.cat-card:hover::before {
-    width: 100%;
-}
-
-.cat-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-}
-
-.cat-card-icon {
-    font-size: 14px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--accent);
-    font-family: 'Unbounded', sans-serif;
-    font-weight: 700;
-    transition: all var(--duration);
-}
-
-.cat-card:hover .cat-card-icon {
-    border-color: var(--accent);
-    background: rgba(212, 106, 26, 0.1);
-}
-
-.cat-card-name {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: var(--text-base);
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 6px;
-    letter-spacing: 0.01em;
-}
-
-.cat-card-desc {
-    font-size: var(--text-sm);
-    color: rgba(255, 255, 255, 0.3);
-    line-height: 1.6;
 }
 
 /* ─── Services ─── */
@@ -1377,7 +1287,6 @@ button {
     .bento-card.featured { grid-column: span 2; grid-row: span 1; }
     .bento-card.featured .bento-card-img { min-height: 260px; }
     .bento-card.featured .bento-card-body { min-height: 260px; }
-    .cat-grid { grid-template-columns: 1fr 1fr; }
     .services-grid { grid-template-columns: 1fr 1fr; }
     .metal-advantages { grid-template-columns: 1fr 1fr; }
     .about-layout, .cta-layout { grid-template-columns: 1fr; }
@@ -1390,7 +1299,6 @@ button {
     .burger { display: flex; }
     .bento-grid { grid-template-columns: 1fr; }
     .bento-card.featured { grid-column: span 1; }
-    .cat-grid { grid-template-columns: 1fr; }
     .news-grid { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .metal-advantages { grid-template-columns: 1fr; }

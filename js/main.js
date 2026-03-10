@@ -81,12 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', closeMobile);
     });
 
-    document.querySelectorAll('.cat-card').forEach(card => {
-        card.addEventListener('click', () => {
-            document.getElementById('cta').scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
     const form = document.getElementById('ctaForm');
     const submitBtn = document.getElementById('submitBtn');
 
