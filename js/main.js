@@ -81,30 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', closeMobile);
     });
 
-    const form = document.getElementById('ctaForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        if (form.querySelector('input[name="website"]').value) return;
-
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Отправляем...';
-
-        setTimeout(() => {
-            alert('Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
-            form.reset();
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Отправить заявку';
-        }, 800);
-    });
-
     const scrollTopBtn = document.getElementById('scrollTop');
 
     window.addEventListener('scroll', () => {
